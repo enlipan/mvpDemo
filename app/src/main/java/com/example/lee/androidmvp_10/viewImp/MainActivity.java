@@ -60,6 +60,11 @@ public class MainActivity extends AppCompatActivity implements IViewMainActivity
             Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         }else if (id == R.id.iv_center_image){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             showImageAfterClick();
         }
     }
