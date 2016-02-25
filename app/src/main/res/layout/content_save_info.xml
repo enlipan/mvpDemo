@@ -42,6 +42,7 @@
         style="@style/SaveInfoTextViewStyle" />
 
     <EditText
+        android:id="@+id/et_id"
         android:layout_below="@id/tv_age_title"
         android:layout_toRightOf="@id/tv_id_title"
         android:layout_width="match_parent"

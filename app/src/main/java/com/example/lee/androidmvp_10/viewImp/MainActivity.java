@@ -4,16 +4,13 @@ import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.lee.androidmvp_10.R;
-import com.example.lee.androidmvp_10.presenter.OptionDataPresenterImp;
 import com.example.lee.androidmvp_10.presenter.ShowImagePresenterImp;
-import com.example.lee.androidmvp_10.presenterImp.IOptionDataPresenter;
 import com.example.lee.androidmvp_10.presenterImp.IShowImagePresenter;
 import com.example.lee.androidmvp_10.view.IViewMainActivity;
 
@@ -61,14 +58,9 @@ public class MainActivity extends AppCompatActivity implements IViewMainActivity
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.fab){
+        if (id == R.id.fab_add){
             mShowImagePresenter.goToSaveInfo(this);
         }else if (id == R.id.iv_center_image){
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
             showImageAfterClick();
         }
     }

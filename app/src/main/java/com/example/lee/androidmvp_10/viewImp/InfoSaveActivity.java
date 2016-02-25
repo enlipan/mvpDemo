@@ -5,8 +5,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 import com.example.lee.androidmvp_10.R;
+import com.example.lee.androidmvp_10.model.bean.PersonBean;
 import com.example.lee.androidmvp_10.presenter.OptionDataPresenterImp;
 import com.example.lee.androidmvp_10.presenterImp.IOptionDataPresenter;
 import com.example.lee.androidmvp_10.view.IViewInfoSaveActivity;
@@ -17,6 +19,10 @@ import com.example.lee.androidmvp_10.view.IViewInfoSaveActivity;
 public class InfoSaveActivity extends AppCompatActivity implements IViewInfoSaveActivity, View.OnClickListener {
 
     private IOptionDataPresenter mOptionDataPresenter;
+
+    private EditText mNameEt;
+    private EditText mAgeEt;
+    private EditText mIdEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,10 @@ public class InfoSaveActivity extends AppCompatActivity implements IViewInfoSave
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_save);
         fab.setOnClickListener(this);
 
+        mNameEt = (EditText) findViewById(R.id.et_name);
+        mAgeEt = (EditText) findViewById(R.id.et_age);
+        mIdEt = (EditText) findViewById(R.id.et_id);
+
     }
 
 
@@ -36,7 +46,20 @@ public class InfoSaveActivity extends AppCompatActivity implements IViewInfoSave
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.fab_save){
-
+            savePersonData();
         }
+    }
+
+    void savePersonData(){
+        PersonBean person = new PersonBean();
+        person.id = Long.valueOf(mIdEt.getText().toString());
+        person.name = mNameEt.getText().toString();
+        person.age = Integer.parseInt(mAgeEt.getText().toString());
+        mOptionDataPresenter.savePersonDate(this,person);
+    }
+
+    @Override
+    public void backToMainAc() {
+        this.finish();
     }
 }
