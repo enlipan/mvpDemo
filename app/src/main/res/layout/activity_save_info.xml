@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".viewImp.MainActivity">
+    tools:context=".viewImp.InfoSaveActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -22,14 +22,14 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main"/>
+    <include layout="@layout/content_save_info"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_add"
+        android:id="@+id/fab_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add"/>
+        android:src="@android:drawable/ic_menu_save"/>
 
 </android.support.design.widget.CoordinatorLayout>

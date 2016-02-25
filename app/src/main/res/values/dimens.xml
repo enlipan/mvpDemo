@@ -3,4 +3,11 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="save_info_tv_width">50dp</dimen>
+    <dimen name="save_info_tv_height">20dp</dimen>
+    <dimen name="save_info_tv_margin_left">16dp</dimen>
+    <dimen name="save_info_tv_margin_right">16dp</dimen>
+    <dimen name="save_info_tv_margin_top">12dp</dimen>
+    <dimen name="save_info_tv_margin_bottom">12dp</dimen>
 </resources>

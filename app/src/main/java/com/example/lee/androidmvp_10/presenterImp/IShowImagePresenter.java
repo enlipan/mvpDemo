@@ -1,5 +1,6 @@
 package com.example.lee.androidmvp_10.presenterImp;
 
+import android.app.Activity;
 import android.content.Context;
 
 /**
@@ -7,6 +8,7 @@ import android.content.Context;
  */
 public interface IShowImagePresenter {
 
-    void ChangeImage(Context context,int index,int[] res);
+    void changeImage(Context context, int index, int[] res);
 
+    void goToSaveInfo(Activity ac);
 }
