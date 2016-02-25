@@ -1,12 +1,15 @@
 package com.example.lee.androidmvp_10.presenter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 
 import com.example.lee.androidmvp_10.presenterImp.IShowImagePresenter;
 import com.example.lee.androidmvp_10.view.IViewMainActivity;
+import com.example.lee.androidmvp_10.viewImp.InfoSaveActivity;
 
 import java.lang.ref.SoftReference;
 import java.util.WeakHashMap;
@@ -50,11 +53,17 @@ public class ShowImagePresenterImp implements IShowImagePresenter{
     }
 
     @Override
-    public void ChangeImage(Context context, int index, int[] res) {
+    public void changeImage(Context context, int index, int[] res) {
         int resIndex = index % res.length;
         loadBitMapToCache(context,resIndex, res);
         BitmapDrawable bitmapDrawable = getBitmapDrawableFromCache(context,resIndex, res);
         mIViewMainActivity.changeImageByBitmapCache(bitmapDrawable);
+    }
+
+    @Override
+    public void goToSaveInfo(Activity ac) {
+        Intent intent = new Intent(ac, InfoSaveActivity.class);
+        mIViewMainActivity.goToSaveInfo(intent);
     }
 
 }

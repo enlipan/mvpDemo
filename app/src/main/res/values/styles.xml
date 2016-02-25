@@ -17,4 +17,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <style name="SaveInfoTextViewStyle">
+        <item name="android:layout_height">@dimen/save_info_tv_height</item>
+        <item name="android:layout_width">@dimen/save_info_tv_width</item>
+
+        <item name="android:layout_marginBottom">@dimen/save_info_tv_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/save_info_tv_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/save_info_tv_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/save_info_tv_margin_right</item>
+    </style>
+
 </resources>
