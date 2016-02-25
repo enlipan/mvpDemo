@@ -1,4 +1,4 @@
-package com.example.lee.androidmvp_10.presenterImp;
+package com.example.lee.androidmvp_10.presenter;
 
 import android.app.Activity;
 import android.content.Context;

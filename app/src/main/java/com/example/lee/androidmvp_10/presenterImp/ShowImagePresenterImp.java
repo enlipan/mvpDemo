@@ -1,4 +1,4 @@
-package com.example.lee.androidmvp_10.presenter;
+package com.example.lee.androidmvp_10.presenterImp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 
-import com.example.lee.androidmvp_10.presenterImp.IShowImagePresenter;
+import com.example.lee.androidmvp_10.presenter.IShowImagePresenter;
 import com.example.lee.androidmvp_10.view.IViewMainActivity;
 import com.example.lee.androidmvp_10.viewImp.InfoSaveActivity;
 

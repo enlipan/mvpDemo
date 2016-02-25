@@ -1,4 +1,4 @@
-package com.example.lee.androidmvp_10.presenterImp;
+package com.example.lee.androidmvp_10.presenter;
 
 import android.content.Context;
 import android.widget.EditText;

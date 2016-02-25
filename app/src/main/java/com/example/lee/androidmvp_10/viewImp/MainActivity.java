@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.lee.androidmvp_10.R;
-import com.example.lee.androidmvp_10.presenter.ShowImagePresenterImp;
-import com.example.lee.androidmvp_10.presenterImp.IShowImagePresenter;
+import com.example.lee.androidmvp_10.presenterImp.ShowImagePresenterImp;
+import com.example.lee.androidmvp_10.presenter.IShowImagePresenter;
 import com.example.lee.androidmvp_10.view.IViewMainActivity;
 
 public class MainActivity extends AppCompatActivity implements IViewMainActivity,View.OnClickListener{

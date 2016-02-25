@@ -1,4 +1,4 @@
-package com.example.lee.androidmvp_10.presenter;
+package com.example.lee.androidmvp_10.presenterImp;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -7,7 +7,7 @@ import android.widget.EditText;
 import com.example.lee.androidmvp_10.model.IPersonSaveModel;
 import com.example.lee.androidmvp_10.model.bean.PersonBean;
 import com.example.lee.androidmvp_10.modelImp.PersonSaveModelImp;
-import com.example.lee.androidmvp_10.presenterImp.IOptionDataPresenter;
+import com.example.lee.androidmvp_10.presenter.IOptionDataPresenter;
 import com.example.lee.androidmvp_10.view.IViewInfoSaveActivity;
 
 /**

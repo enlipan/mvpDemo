@@ -8,9 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.lee.androidmvp_10.R;
-import com.example.lee.androidmvp_10.model.bean.PersonBean;
-import com.example.lee.androidmvp_10.presenter.OptionDataPresenterImp;
-import com.example.lee.androidmvp_10.presenterImp.IOptionDataPresenter;
+import com.example.lee.androidmvp_10.presenterImp.OptionDataPresenterImp;
+import com.example.lee.androidmvp_10.presenter.IOptionDataPresenter;
 import com.example.lee.androidmvp_10.view.IViewInfoSaveActivity;
 
 /**
