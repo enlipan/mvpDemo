@@ -51,11 +51,7 @@ public class InfoSaveActivity extends AppCompatActivity implements IViewInfoSave
     }
 
     void savePersonData(){
-        PersonBean person = new PersonBean();
-        person.id = Long.valueOf(mIdEt.getText().toString());
-        person.name = mNameEt.getText().toString();
-        person.age = Integer.parseInt(mAgeEt.getText().toString());
-        mOptionDataPresenter.savePersonDate(this,person);
+        mOptionDataPresenter.savePersonDate(this,mNameEt,mAgeEt,mIdEt);
     }
 
     @Override

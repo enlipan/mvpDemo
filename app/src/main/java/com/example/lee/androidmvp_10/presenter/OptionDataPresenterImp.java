@@ -1,6 +1,8 @@
 package com.example.lee.androidmvp_10.presenter;
 
 import android.content.Context;
+import android.text.TextUtils;
+import android.widget.EditText;
 
 import com.example.lee.androidmvp_10.model.IPersonSaveModel;
 import com.example.lee.androidmvp_10.model.bean.PersonBean;
@@ -21,9 +23,12 @@ public class OptionDataPresenterImp implements IOptionDataPresenter{
         mIViewInfoSaveAc = activity;
     }
 
-
     @Override
-    public void savePersonDate(Context context,PersonBean person) {
+    public void savePersonDate(Context context, EditText nameEt, EditText ageEt, EditText idEt) {
+        PersonBean person = new PersonBean();
+        if (idEt != null && !TextUtils.isEmpty(idEt.getText().toString()))person.id = Long.valueOf(idEt.getText().toString());
+        if (nameEt != null  && !TextUtils.isEmpty(nameEt.getText().toString()))person.name = nameEt.getText().toString();
+        if (ageEt != null && !TextUtils.isEmpty(ageEt.getText().toString()))person.age = Integer.parseInt(ageEt.getText().toString());
         mIPersonSaveModel = new PersonSaveModelImp(context);
         mIPersonSaveModel.savePerson(person);
         mIViewInfoSaveAc.backToMainAc();
